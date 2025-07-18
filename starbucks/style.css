@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/* Utilities */
+.flex{
+    display: flex;
+}
+.btn{
+    padding: 7px 16px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-cont{
+    height: 99px;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 2px solid lightgray;
+}
+.nav-logo{
+    margin-right: 20px;
+}
+.nav-content{
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu2{
+    align-items: center;
+}
+.nav-menu a{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 10px;
+    position: relative;
+}
+.nav-menu a::after{
+    content: "";
+    height: 5px;
+    border-radius: 50px;
+    background-color: #333;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    transition: width ease-in .6s;
+}
+.nav-menu a:hover::after{
+    width: 94%;
+}
+.nav-menu2 a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.nav-menu2>a{
+    margin-right: 35px;
+}
+.nav-submenu a{
+    margin: 0 5px;
+}
+.join{
+    background-color: black;
+    color: white;
+}
+.loc{
+    margin-right:20px;
+    font-size: 22px;
+}
+@media  screen and (max-width:400px) {
+.flex{
+    flex-direction: column;
+}
+a{
+    display: block;
+}
+}
