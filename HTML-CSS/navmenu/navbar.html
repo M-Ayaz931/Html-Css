@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 125px;
+    width: 125px;
+    border: 1px solid black;
+    position: relative;  /* important for ::after */
+ /* optional spacing */
+}
+
+.menu li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;  /* place the line just below the box */
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: black;
+    transition: width ease-in .6s;
+}
+.menu li:hover::after{
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Pokedx</a></li>
+    <li><a href="#">Video Games</a></li>
+    <li><a href="#">Training</a></li>
+    <li><a href="#">News</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

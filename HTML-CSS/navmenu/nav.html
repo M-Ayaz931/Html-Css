@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+            @font-face {
+    font-family: 'sinkin';
+    src: url('/fonts/sinkinsans-400regular-webfont.woff2') format('woff2'),
+         url('/fonts/sinkinsans-400regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+
+}
+html {
+            font-size: 62.5%;
+        }
+
+body{
+     font-family: 'sinkin',Arial, Helvetica, sans-serif;
+     font-weight: 400;
+     font-size: 1.5rem;
+     line-height: 1.5;
+}
+        
+
+        
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            padding: 1rem 1rem;
+        }
+    .nav-menu a{
+            display: inline-block;
+        }
+        .nav-cont {
+            display: flex;
+            justify-content: space-between;
+            padding: 2.5rem 4rem;
+            background-color: darkblue;
+        }
+
+        .menu-button a {
+            border: 1px solid white;
+            border-radius: 1rem;
+        }
+        .menu-button a ::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: darkorange;
+            transition: width .5s;
+        }
+        .menu-button a:hover::after{
+            width: 100%;
+        }
+        h1{
+            font-size: 4rem;
+            margin: 3rem 0 1rem;
+        }
+        p{
+            font-size: 1rem;
+            /* for line length means character in one line */
+            width: 60ch; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-cont">
+        <div class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="menu-button">
+            <a href="#">SignUp</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+    <h1>Heading 1</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sed earum aspernatur! Adipisci, pariatur impedit, quasi quo expedita repellat aut culpa quas qui voluptatum repudiandae. Aliquam aut delectus ipsam, nisi similique provident omnis perspiciatis ex vitae? Expedita libero quas maxime porro, deserunt blanditiis quibusdam ipsum temporibus, voluptas sapiente laboriosam ipsam?</p>
+    <h1>Heading 2</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sed ipsum numquam quibusdam ratione ipsa, repudiandae debitis. Praesentium iusto minus qui dolore, facilis incidunt blanditiis. Laborum commodi amet exercitationem veniam asperiores, non nihil minima voluptate expedita dolores, numquam recusandae maxime, ratione beatae ut quas minus dolor eaque nulla officiis tempore?</p>
+</body>
+
+</html>
