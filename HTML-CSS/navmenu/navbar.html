@@ -5,52 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .menu ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
+        * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.menu li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-    height: 125px;
-    width: 125px;
-    border: 1px solid black;
-    position: relative;  /* important for ::after */
- /* optional spacing */
+.wrapper {
+    position: relative;
 }
-
-.menu li::after {
-    content: "";
+.container {
+    cursor: pointer;
     position: absolute;
-    bottom: -10px;  /* place the line just below the box */
-    left: 0;
-    width: 0;
-    height: 5px;
-    background-color: black;
-    transition: width ease-in .6s;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    transition: left 1s;
 }
-.menu li:hover::after{
-    width: 100%;
+.container div {
+    height: 5px;
+    width: 35px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 270px;
+    height: 100vh;
+    background-color: dodgerblue;
+    transition: left 1s;
+    padding-top: 50px;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+.nav ul li {
+    padding: 15px 20px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav ul li:hover {
+    background-color: black;
+}
+.nav ul li:hover > a {
+    color: white;
 }
 
     </style>
 </head>
 <body>
-    <div class="menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Pokedx</a></li>
-    <li><a href="#">Video Games</a></li>
-    <li><a href="#">Training</a></li>
-    <li><a href="#">News</a></li>
-  </ul>
+<div class="wrapper">
+    <div class="container" id="menuIcon" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="nav" id="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Section</a></li>
+            <li><a href="#">Follow</a></li>
+        </ul>
+    </div>
 </div>
 
+
+    <script>
+       function toggleMenu(x) {
+    let nav = document.getElementById("sidebar");
+    let icon = document.getElementById("menuIcon");
+
+    x.classList.toggle("change");
+
+    if (x.classList.contains("change")) {
+        nav.style.left = "0";        // Slide nav in
+        icon.style.left = "220px";   // Move icon to right
+    } else {
+        nav.style.left = "-270px";   // Hide nav
+        icon.style.left = "20px";    // Move icon back to left
+    }
+}
+
+    </script>
 </body>
 </html>
