@@ -4,8 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+   
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4rem;
+}
+.btn{
+    padding: 7px 14px;
+    border-radius: 50px;
+}
+.flex{
+    display: flex;
+}
+.nav-container{
+padding: 10px 16px;
+border-bottom: 1px solid grey;
+justify-content: space-between;
+align-items: center;
+}
+.navlogo img{
+    height: 55px;
+}
+.navbar div{
+    height: 2px;
+    width: 24px;
+    background-color: rgb(73, 72, 72);
+    transition: transform 0.3s;
+}
+.bar2{
+    margin: 5px 0;
+}
+
+.change .bar1{
+    transform: translate(0,7px) rotate(-135deg);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: translate(0,-7px) rotate(135deg);
+}
+.sidebar{
+    padding: 10px 20px;
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    right: -280px;
+    z-index: 10;
+    background-color: aliceblue;
+    transition: all ease-in 0.4s;
+
+}
+.menu ul {
+    list-style: none;
+}
+.menu li {
+    margin: 40px 0;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-btn button{
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 25px 4px;
+    outline: 0;
+    border: 1px solid black;
+}
+#signup{
+    background-color: black;
+    color: white;
+}
+.location p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.location p i{
+    font-size: 15px;
+    margin: 0 8px;
+}
+.cards{
+    flex-direction: column;
+    margin: 10px 0;
+    /* background-color: orange; */
+}
+.card{
+    background-color:rgb(0, 98, 65);
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 10px 0 10px 0;
+}
+
+.card img{
+    width: 100%;
+}
+.card h2{
+    margin-top: 10px;
+}
+.card p{
+    margin: 15px 0;
+}
+.card button{
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+@media screen and (min-width:1024px){
+    .cards{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card{
+        width: 48%;
+    }
+}
+  </style>
 </head>
 <body>
     <div class="nav">
@@ -36,7 +171,22 @@
                     <p><i class="fa-solid fa-location-dot"></i> Find a store</p>
                 </div>
                 </div>
-               
+    </div>
+    <div class="cards flex">
+        <div class="card flex">
+                <img src="./images/menu.webp" alt="">
+                <h2>The Secret Menu</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, aut! Possimus vero ab ipsa totam consequatur, eaque iste doloremque commodi.</p>
+                <button class="btn">join starbucks Rewards</button>
+        
+        </div>
+        <div class="card flex">
+                <img src="./images/menu.webp" alt="">
+                <h2>The Secret Menu</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, aut! Possimus vero ab ipsa totam consequatur, eaque iste doloremque commodi.</p>
+                <button class="btn">join starbucks Rewards</button>
+        
+        </div>
     </div>
     <script>
         function slide(x){

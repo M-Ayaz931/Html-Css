@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: 1em sans-serif;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(253, 253, 253); */
+    box-shadow: rgb(228, 228, 228) 0px 1px 1px;
+   justify-items: center;
+}
+.logo img{
+    height: 50px;
+    margin-top: -8px;
+}
+.loca i{
+    margin-right: 10px;}
+.loca{
+    margin-right: 10px;
+     font-size: 17px;
+}
+.loca:hover{
+color: rgb(1, 109, 1);
+}
+.logo ul {
+    display: flex;
+    
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+    margin: 35px 20px;
+}
+.logo li{
+    text-decoration: none;
+    list-style: none;
+}
+.secondm{
+    display: flex;
+    align-items: center;
+}
+.secondm li{
+ list-style: none;
+}
+.secondm a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+ /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    margin: 36px 20px;
+}
+.mq-dis{
+    display: none;
+}
+
+.logo a:hover{
+    color: rgb(1, 109, 1);
+
+}
+
+#now{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    margin-right: 25px;
+}
+#up{
+    border-style: solid ;
+    padding: 10px;
+    border-radius: 20px;
+    background: none;
+    border-width: 1px;
+   margin-right: -24px;
+
+}
+#up:hover{
+    background-color: rgb(243, 243, 243);
+}
+#now:hover{
+    background-color: rgb(87, 86, 86);
+}
+/* first pic starts from this */
+
+
+@media  screen and (max-width:890px) {
+.nav{
+display: none;
+}
+.mq-dis{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+.mq-logo img{
+height: 60px;
+}
+.menu i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+
+}
