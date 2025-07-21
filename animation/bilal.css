@@ -92,11 +92,11 @@ color: rgb(1, 109, 1);
 display: none;
 }
 .mq-dis{
+    align-items: center;
     display: block;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    align-items: center;
 }
 .mq-logo img{
 height: 60px;

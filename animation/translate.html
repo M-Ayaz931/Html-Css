@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-        }
-        .boxes div{
-            height: 5px;
-            width: 60px;
-            background-color: lightgreen;
-            transition: all 3s;
-            margin: 5px 0;
-            
-            
-        }
-        .boxes:hover .box1{
-            transform:  translate(0,5px) rotate(45deg);
-        }
-        .boxes:hover .box2{
-            transform:  translate(0,-5px) rotate(-45deg);
-        }
-
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .boxes div {
+        height: 5px;
+        width: 60px;
+        background-color: lightgreen;
+        transition: all 3s;
+        margin: 5px 0;
+      }
+      .boxes:hover .box1 {
+        transform: translate(0, 5px) rotate(45deg);
+      }
+      .boxes:hover .box2 {
+        transform: transl ate(0, -5px) rotate(-45deg);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="boxes">
-        <div class="box box1"></div>
-        <div class="box box2"></div>
+      <div class="box box1"></div>
+      <div clas s="box box2"></div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.6rem;
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signIn{
+            max-width: 300px;
+            text-align: center;
+            width: 100%;
+            /* background-color: orange; */
+        }
+        .control{
+             border: 1px solid   #ced4da;
+             outline: 0;
+        }
+        .control:focus{
+            border: #86b7fe ;
+            box-shadow: 0 0 0 5px #b9d3fa;
+        }
+        .control,.btn{
+            width: 100%;
+            border: 5px;
+            padding: 1.5rem 2rem;
+            box-sizing: border-box;
+           border-radius: 5px;
+        }
+        .btn{
+            border-radius: 30px;
+            background-color: #0d6efd;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            outline: 0;
+        }
+        .btn:hover{
+            background-color: #0954c4;
+        }
+        .group{
+            margin: 1rem 0;
+        }
+        p{
+              color: #6c757d;
+;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="signIn">
+        <h1>Please sign in</h1>
+        <div class="group">
+            <input type="email" class="control"
+            placeholder="Email address" 
+            minlength="5"
+            maxlength="100"
+            autofocus
+            required
+            />
+        </div>
+        <div class="group">
+            <input type="password" class="control"
+            placeholder="Enter Password" 
+            maxlength="8"
+            required
+            />
+        </div>
+        <div class="group">
+            <input type="checkbox" id="rem"/>
+            <label for="rem">Remember me</label>
+        </div>
+        <button class="btn" type="submit">Sign in</button>
+        <p>Copyright &copy; 2020</p>
+    </form>
+</body>
+</html>
