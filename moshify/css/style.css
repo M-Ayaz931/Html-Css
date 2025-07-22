@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Typography */
 html{
     font-size: 62.5%;
 }
@@ -43,5 +44,31 @@ h3{
     }
     h3{
         font-size: 2.4rem;
+    }
+}
+
+/* arrow links */
+a{
+    text-decoration: none;
+}
+.arrow-link{
+    color: var(--color-accent);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.arrow-link::after{
+    content: "-->";
+    margin-left: 5px;
+    font-weight: 500;
+    transition: margin-left 0.3s;
+}
+.arrow-link:hover::after{
+    margin-left: 10px;
+}
+
+@media  screen and (min-width:1024px) {
+    .arrow-link{
+        font-size: 1.5rem;
     }
 }
